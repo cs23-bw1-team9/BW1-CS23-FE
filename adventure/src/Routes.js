@@ -3,7 +3,7 @@ import { BrowserRouter, Route } from "react-router-dom";
 
 //Routes
 
-import LandingPage from "./Components/LandingPage";
+import LandingPage from "./Components/LandingPage/LandingPage";
 import GamePage from "./Components/GamePage/GamePage";
 
 const Routes = () => {
