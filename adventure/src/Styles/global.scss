@@ -1,3 +1,19 @@
-body {
-  margin: 0 auto;
+input {
+  margin: 10px 0 10px 0;
+  width: 80%;
+  height: 30px;
+  font-family: "Roboto", sans-serif;
+  font-size: 2rem;
+}
+.form-btn {
+  width: 60%;
+  height: 50px;
+  border-radius: 25px;
+  margin-top: 5%;
+  font-size: 2rem;
+  border: 0;
+  &:hover {
+    background-color: $Mega-Black;
+    color: $Super-White;
+  }
 }
