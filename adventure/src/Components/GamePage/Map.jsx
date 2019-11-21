@@ -8,6 +8,7 @@ const Map = ({map}) => {
     <Graph
       id="dungeon-map"
       data={map}
+      // config={config}
     />
   )
 }

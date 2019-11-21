@@ -16,8 +16,8 @@ const GamePage = () => {
           return {
             ...node,
             color: node.id === current.id
-            ? "#f00"
-            : "#fff"
+              ? "#f00"
+              : "#fff"
           }
         })
         setMap(map)
