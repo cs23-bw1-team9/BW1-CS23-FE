@@ -7,7 +7,25 @@ class Register extends React.Component {
     password1: "",
     password2: ""
   };
+  handleSubmit = e => {
+    e.preventDefault();
+    const endpoint = "https://cs23-bw1-team9.herokuapp.com/api/registration/";
+    axios
+      .post(endpoint, this.state)
+      .then(res => {
+        console.log("Register RESPONSE", res);
+        localStorage.setItem("key", res.data.key);
+        this.props.history.push("/gamepage");
+      })
+      .catch(error => {
+        console.error("LOGIN ERROR", error);
+      });
+  };
 
+  handleInputChange = e => {
+    const { id, value } = e.target;
+    this.setState({ [id]: value });
+  };
   render() {
     return (
       <>
@@ -53,7 +71,6 @@ class Register extends React.Component {
               </div>
             </form>
             {/*   //------------- Giant OR Container -------------\\ */}
-
             <div className="or">
               <h1> OR </h1>
             </div>
@@ -62,25 +79,6 @@ class Register extends React.Component {
       </>
     );
   }
-
-  handleSubmit = e => {
-    e.preventDefault();
-    const endpoint = "https://cs23-bw1-team9.herokuapp.com/api/registration/";
-    axios
-      .post(endpoint, this.state)
-      .then(res => {
-        console.log("Register RESPONSE", res);
-        localStorage.setItem("key", res.data.key);
-      })
-      .catch(error => {
-        console.error("LOGIN ERROR", error);
-      });
-  };
-
-  handleInputChange = e => {
-    const { id, value } = e.target;
-    this.setState({ [id]: value });
-  };
 }
 
 export default Register;
