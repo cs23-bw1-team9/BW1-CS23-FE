@@ -4,18 +4,18 @@ import axios from "axios";
 axios.defaults.baseURL = "https://cs23-bw1-team9.herokuapp.com/api/";
 
 axios.interceptors.request.use(function(requestConfig) {
-  const token = localStorage.getItem("token");
-  requestConfig.headers.authorization = token;
+  const key = localStorage.getItem("key");
+  requestConfig.headers.authorization = key;
   return requestConfig;
 });
 
 export default function(Component) {
   return class Authenticated extends React.Component {
     render() {
-      const token = localStorage.getItem("token");
-      const notLoggedIn = <h3>Please login to see the jokes</h3>;
+      const key = localStorage.getItem("key");
+      const notLoggedIn = <h3>Please Join Us</h3>;
 
-      return <>{token ? <Component {...this.props} /> : notLoggedIn}</>;
+      return <>{key ? <Component {...this.props} /> : notLoggedIn}</>;
     }
   };
 }
