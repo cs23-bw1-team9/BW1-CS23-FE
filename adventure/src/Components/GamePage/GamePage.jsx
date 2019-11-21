@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-// import Map from "./Map";
+import Map from "./Map";
 
 const GamePage = () => {
   const [isLoading, setIsLoading] = useState(false);
@@ -39,10 +39,7 @@ const GamePage = () => {
   };
 
   return (
-    <Map
-      map={map}
-      data={data}
-    />
+    <Map map={map} />
   )
 };
 
