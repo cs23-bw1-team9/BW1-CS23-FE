@@ -21,15 +21,15 @@ function Controls({ e, ...props }) {
           </button>
           <button
             className=" direction-button"
-            onClick={e => props.move(e, "s")}
-          >
-            S
-          </button>
-          <button
-            className=" direction-button"
             onClick={e => props.move(e, "w")}
           >
             W
+          </button>
+          <button
+            className=" direction-button"
+            onClick={e => props.move(e, "s")}
+          >
+            S
           </button>
         </div>
       </div>

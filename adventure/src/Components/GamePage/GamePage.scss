@@ -12,17 +12,16 @@ p {
   justify-content: center;
   border: 2px solid black;
   margin: 20px 100px 0 0;
-  height: 380px;
-  width: 400px;
+  height: 540px;
+  width: 475px;
   border-radius: 10px;
   background-image: url("../../Images/gameBackground.png");
   .data-inner-container {
     display: flex;
-    justify-content: flex-start;
     text-align: center;
     flex-direction: column;
     h1 {
-      font-size: 3rem;
+      font-size: 3.4rem;
       margin: 30px 0 10px;
       color: white;
       font-family: "Roboto", sans-serif;
@@ -32,6 +31,7 @@ p {
       font-size: 2.3rem;
       color: white;
       font-family: "Roboto", sans-serif;
+      margin: 10px 0 0 0;
     }
   }
 }
