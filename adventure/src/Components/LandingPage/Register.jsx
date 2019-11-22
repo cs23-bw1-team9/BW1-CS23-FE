@@ -15,11 +15,15 @@ class Register extends React.Component {
       .then(res => {
         console.log("Register RESPONSE", res);
         localStorage.setItem("key", res.data.key);
-        this.props.history.push("/gamepage");
+        this.redirectUser();
       })
       .catch(error => {
         console.error("LOGIN ERROR", error);
       });
+  };
+
+  redirectUser = () => {
+    this.props.history.push("/GamePage");
   };
 
   handleInputChange = e => {
