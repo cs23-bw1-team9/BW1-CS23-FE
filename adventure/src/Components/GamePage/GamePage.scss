@@ -1,38 +1,62 @@
-// .game-container {
-//   display: flex;
-//   width: 100%;
-//   height: 100%;
-//   justify-content: space-around;
-//   align-items: center;
-// }
 p {
+  display: flex;
+  justify-content: center;
   font-size: 4rem;
   font-family: "Roboto", sans-serif;
   color: white;
   margin-left: 50px;
-  margin-top: 20px;
+  margin-top: 300px;
+}
+.data-container {
+  display: flex;
+  justify-content: center;
+  border: 2px solid black;
+  margin: 20px 100px 0 0;
+  height: 380px;
+  width: 400px;
+  border-radius: 10px;
+  background-image: url("../../Images/gameBackground.png");
+  .data-inner-container {
+    display: flex;
+    justify-content: flex-start;
+    text-align: center;
+    flex-direction: column;
+    h1 {
+      font-size: 3rem;
+      margin: 30px 0 10px;
+      color: white;
+      font-family: "Roboto", sans-serif;
+      color: white;
+    }
+    h2 {
+      font-size: 2.3rem;
+      color: white;
+      font-family: "Roboto", sans-serif;
+    }
+  }
 }
 .map-container {
   display: flex;
   justify-content: center;
 
   .graph-container {
-    width: 900px;
-    height: 900px;
+    width: 1000px;
+    height: 1000px;
+    background-image: url("../../Images/gameBackground.png");
+    border: 2px solid black;
+    border-radius: 15px;
   }
 }
 svg {
-  border: 2px solid black;
-  width: 900px !important;
-  height: 900px !important;
+  width: 1000px !important;
+  height: 1000px !important;
 }
 
-// .inner-graph-box {
-//   display: flex;
-//   flex-direction: column;
-//   justify-content: space-between;
-// }
 .gr__multi-user-dungeon_netlify_com {
+  background-image: url("../../Images/LandingBackground.jfif");
+  height: 100vh;
+}
+.gr__localhost {
   background-image: url("../../Images/LandingBackground.jfif");
   height: 100vh;
 }
@@ -41,24 +65,28 @@ svg {
 }
 .controls-container {
   height: 42%;
-  padding-bottom: 7px;
-  width: 20%;
+
+  width: 15%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  border-radius: 1.5rem;
 
+  align-items: center;
+  border: 2px solid black;
+  border-radius: 15px;
+  margin: 20px 0 0 100px;
+  background-image: url("../../Images/gameBackground.png");
   .hub-right-heading {
-    font-size: 3rem;
+    font-size: 3.5rem;
     font-family: "Roboto", sans-serif;
     color: white;
+    margin-top: 20px;
   }
   .controls-buttons {
     width: 400px;
     height: 300px;
     display: flex;
     justify-content: center;
+    margin: 20px 0 0 0;
     .direction-controls {
       width: 60%;
       height: 100%;
@@ -66,14 +94,13 @@ svg {
       flex-wrap: wrap;
 
       .direction-button {
-        height: 75px;
-        width: 75px;
+        height: 85px;
+        width: 85px;
         background-color: #2a3439;
         border-radius: 10px;
-        outline: none;
-        margin: 10px 0 0 20px;
+        margin: 10px 0 0 25px;
         color: white;
-        font-size: 2rem;
+        font-size: 3rem;
         font-family: "Roboto", sans-serif;
         cursor: pointer;
         &:hover {
