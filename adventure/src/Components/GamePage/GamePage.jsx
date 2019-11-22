@@ -18,8 +18,8 @@ const GamePage = props => {
         nodes = nodes.map(node => {
           return {
             ...node,
-            x: node.x,
-            y: node.y,
+            x: node.x * 50,
+            y: node.y * 50,
             color: node.id === rest.id ? "#f00" : "#000"
           };
         })
@@ -37,12 +37,8 @@ const GamePage = props => {
     e.preventDefault();
     axiosAuth()
       .post("https://cs23-bw1-team9.herokuapp.com/api/adv/move/", {direction})
-      .then(res => {
-        setCurrent(res.data);
-      })
-      .catch(err => {
-        console.error(err)
-      });
+      .then(res => setCurrent(res.data))
+      .catch(err => console.error(err));
   };
 
   return (
