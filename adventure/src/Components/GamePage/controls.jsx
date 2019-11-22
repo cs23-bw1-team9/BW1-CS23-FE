@@ -15,7 +15,7 @@ function Controls({ e, ...props }) {
             >
               N
             </button>
-            <div className="direction-box" />
+            <div className="direction-container" />
             <button
               className="direction-box direction-button"
               onClick={e => props.move(e, "w")}

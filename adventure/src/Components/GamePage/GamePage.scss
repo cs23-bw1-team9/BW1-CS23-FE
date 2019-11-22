@@ -14,6 +14,7 @@
 
 .graph-container {
   border: 1px solid red;
+  align-self: center;
 }
 
 // .inner-graph-box {
@@ -24,4 +25,29 @@
 
 .graph {
   height: 80%;
+}
+.controls-container {
+  height: 42%;
+  padding-bottom: 7px;
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 1.5rem;
+  background-color: rgba(15, 18, 180, 0.85);
+  border: 5px rgba(223, 11, 11, 0.85) inset;
+  .hub-right-heading {
+    font-size: 3rem;
+  }
+  .controls-buttons {
+    border: 1px solid red;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 95%;
+    height: 70%;
+    .button-container {
+    }
+  }
 }
