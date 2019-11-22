@@ -13,18 +13,20 @@ const GamePage = props => {
     axiosAuth()
       .get("https://cs23-bw1-team9.herokuapp.com/api/adv/init/")
       .then(res => {
-        const { map, ...rest } = res.data;
+        const { map, id } = res.data;
         let {nodes, links} = map
         nodes = nodes.map(node => {
           return {
             ...node,
             x: node.x * 50,
             y: node.y * 50,
-            color: node.id === rest.id ? "#f00" : "#000"
+            color: node.id === id ? "#f00" : "#000",
+            symbolType: node.id === id ? "star" : "square",
+            size: node.id === id ? 300 : 100,
           };
         })
         setRooms({nodes, links});
-        setCurrent(rest);
+        setCurrent(id);
         setIsLoading(false);
       })
       .catch(err => {
@@ -52,7 +54,7 @@ const GamePage = props => {
         </div>
       )}
     </div>
-  );
+  )
 };
 
 export default GamePage;

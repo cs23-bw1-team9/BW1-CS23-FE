@@ -11,9 +11,9 @@ const Routes = () => {
   return (
     <BrowserRouter>
       <Route exact path="/" component={LandingPage} />
-      <PrivateRoute path="/GamePage" component={GamePage} />;
+      <PrivateRoute path="/GamePage" component={GamePage} />
     </BrowserRouter>
-  );
+  )
 };
 
 export default Routes;
