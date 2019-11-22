@@ -5,7 +5,7 @@ import { BrowserRouter, Route } from "react-router-dom";
 import LandingPage from "../Components/LandingPage/LandingPage";
 import GamePage from "../Components/GamePage/GamePage";
 
-import PrivateRoute from "./PrivateRoutes";
+import PrivateRoute from "./PrivateRoutes.js";
 
 const Routes = () => {
   return (

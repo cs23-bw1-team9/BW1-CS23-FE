@@ -57,15 +57,14 @@ const config = {
   }
 };
 
-const Map = ({map}) => {
+const Map = ({ map }) => {
   // console.log(map)
+
   return (
-    <Graph
-      id="dungeon-map"
-      data={map}
-      config={config}
-    />
-  )
-}
+    <>
+      <Graph id="dungeon-map" data={map} config={config} />
+    </>
+  );
+};
 
 export default Map;
