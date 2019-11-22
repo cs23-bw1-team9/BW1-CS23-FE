@@ -3,18 +3,20 @@ import { Graph } from "react-d3-graph";
 
 const Map = ({ map, current, height, width }) => {
   const config = {
+    panAndZoom: false,
     staticGraph: true,
     staticGraphWithDragAndDrop: true,
+    nodeHighlightBehavior: true,
+    maxZoom: 0.5,
+    minZoom: 0.5,
     focusedNodeId: current.id,
     focusAnimationDuration: 1,
     node: {
       symbolType: "square"
     },
     d3: {
-      alphaTarget: 0,
-      gravity: -400,
       linkLength: 180,
-      linkStrength: 1
+      linkStrength: 3
     }
   };
   return (

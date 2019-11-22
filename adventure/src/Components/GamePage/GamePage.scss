@@ -5,16 +5,26 @@
 //   justify-content: space-around;
 //   align-items: center;
 // }
-
-.map-container {
-  // height: 60%;
-  // background-color: rgba(26, 26, 26, 0.85);
-  // border: 1px solid red;
+p {
+  font-size: 4rem;
+  font-family: "Roboto", sans-serif;
+  color: white;
+  margin-left: 50px;
+  margin-top: 20px;
 }
+.map-container {
+  display: flex;
+  justify-content: center;
 
-.graph-container {
-  border: 1px solid red;
-  align-self: center;
+  .graph-container {
+    width: 900px;
+    height: 900px;
+  }
+}
+svg {
+  border: 2px solid black;
+  width: 900px !important;
+  height: 900px !important;
 }
 
 // .inner-graph-box {
@@ -22,7 +32,10 @@
 //   flex-direction: column;
 //   justify-content: space-between;
 // }
-
+.gr__localhost {
+  background-image: url("../../Images/LandingBackground.jfif");
+  height: 100vh;
+}
 .graph {
   height: 80%;
 }
@@ -35,19 +48,39 @@
   justify-content: space-between;
   align-items: center;
   border-radius: 1.5rem;
-  background-color: rgba(15, 18, 180, 0.85);
-  border: 5px rgba(223, 11, 11, 0.85) inset;
+
   .hub-right-heading {
     font-size: 3rem;
+    font-family: "Roboto", sans-serif;
+    color: white;
   }
   .controls-buttons {
-    border: 1px solid red;
+    width: 400px;
+    height: 300px;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 95%;
-    height: 70%;
-    .button-container {
+    justify-content: center;
+    .direction-controls {
+      width: 60%;
+      height: 100%;
+      display: flex;
+      flex-wrap: wrap;
+
+      .direction-button {
+        height: 75px;
+        width: 75px;
+        background-color: #2a3439;
+        border-radius: 10px;
+        outline: none;
+        margin: 10px 0 0 20px;
+        color: white;
+        font-size: 2rem;
+        font-family: "Roboto", sans-serif;
+        cursor: pointer;
+        &:hover {
+          background-color: white;
+          color: black;
+        }
+      }
     }
   }
 }
