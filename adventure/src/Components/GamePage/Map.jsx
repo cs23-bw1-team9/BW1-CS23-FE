@@ -10,7 +10,6 @@ const Map = ({map, current, height, width}) => {
       symbolType: "square"
     }
   };
-  console.log('CURRENT',current)
   return (
     <div className="graph-container">
       <Graph
