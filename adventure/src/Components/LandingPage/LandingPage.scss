@@ -1,0 +1,70 @@
+.logo-container {
+  display: flex;
+  justify-content: center;
+
+  margin: 80px 0;
+  .logo {
+    // margin: 0 10px 0 0;
+  }
+}
+//------------- Landing Page Body That Sets Background Img -------------\\
+.landing-page-body {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: #8e8f7c;
+  background-image: url("../../Images/LandingBackground.jfif");
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+//------------- Main Container -------------\\
+.main-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 0 0 50px 0;
+
+  p {
+    font-size: 2rem;
+    font-family: "Roboto", sans-serif;
+  }
+  .form-header {
+    font-size: 2rem;
+    color: white;
+    margin: 0 0 30px 0;
+    font-family: "Roboto", sans-serif;
+  }
+  //------------- Container for Sign Up -------------\\
+  .signup-container {
+    height: 400px;
+    width: 20%;
+    .signup-main-header {
+      font-size: 3rem;
+      color: white;
+      font-family: "Roboto", sans-serif;
+      margin: 0 0 10px 0;
+    }
+    .or {
+      font-size: 6rem;
+      color: $Super-White;
+      font-family: "Roboto", sans-serif;
+      margin: 20px 0 50px 0;
+    }
+  }
+  //------------- Container for Login -------------\\
+  .login-container {
+    height: 400px;
+    width: 20%;
+    .form-main-header {
+      font-size: 3rem;
+      color: white;
+      font-family: "Roboto", sans-serif;
+      margin: 0 0 10px 0;
+    }
+  }
+}
